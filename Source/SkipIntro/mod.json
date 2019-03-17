@@ -2,7 +2,7 @@
     "Name": "SkipIntro",
     "Enabled": true,
 
-    "Version": "1.3.2-001R",
+    "Version": "1.5.0-001R",
     "Description": "Skips the intro cutscene and splash screens.",
     "Author": "Mad (Forked from Mpstark)",
 	
