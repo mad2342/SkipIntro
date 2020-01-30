@@ -2,16 +2,13 @@
 using Harmony;
 using BattleTech;
 
-
-
 namespace SkipIntro
 {
     public class SkipIntro
     {
-
         public static void Init()
         {
-            var harmony = HarmonyInstance.Create("de.mad.SkipIntro");
+            HarmonyInstance harmony = HarmonyInstance.Create("de.mad.SkipIntro");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
@@ -50,7 +47,7 @@ namespace SkipIntro
         {
             Traverse.Create(__instance).Field("currentState").SetValue(3);
 
-            var activate = Traverse.Create(__instance).Field("activate").GetValue<ActivateAfterInit>();
+            ActivateAfterInit activate = Traverse.Create(__instance).Field("activate").GetValue<ActivateAfterInit>();
             activate.enabled = true;
 
             return false;
